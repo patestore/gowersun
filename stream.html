@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Stream — Midnight City Music · Gower Sun</title>
+  <meta name="description" content="Stream Midnight City Music by Gower Sun on Spotify, Apple Music, YouTube Music, Tidal, Amazon Music and Deezer." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Fraunces:ital,opsz,wght@1,9..144,400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="nav is-scrolled" id="nav">
+    <a class="nav__brand" href="index.html" aria-label="Gower Sun — home">
+      <img class="nav__mark" src="assets/favicon.svg" alt="" aria-hidden="true" />
+      <span>Gower Sun</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="index.html#work">Work</a>
+      <a class="nav__link nav__link--cta" href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="subpage">
+    <div class="wrap">
+      <div class="hub">
+        <img class="hub__art" src="assets/img/mcm/keyart.jpg" alt="Midnight City Music" />
+        <span class="eyebrow hub__eyebrow">Now streaming</span>
+        <h1 class="hub__title">Midnight City <em>Music</em></h1>
+        <p class="hub__tagline">Original scores, arrangements &amp; productions by Gower Sun. Pick your platform.</p>
+
+        <div class="hub__list">
+          <a class="linkbtn" href="https://open.spotify.com/artist/7m8WHbipF4Y3BpIiMeiUiY" target="_blank" rel="noopener">
+            <span class="icon-chip"><img src="assets/img/mcm/spotify.png" alt="" /></span>
+            <span class="linkbtn__text"><span class="linkbtn__label">Spotify</span></span>
+            <span class="linkbtn__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="linkbtn" href="https://music.apple.com/artist/midnight-city-music/1606535807" target="_blank" rel="noopener">
+            <span class="icon-chip"><img src="assets/img/mcm/apple-music-black.png" alt="" /></span>
+            <span class="linkbtn__text"><span class="linkbtn__label">Apple Music</span></span>
+            <span class="linkbtn__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="linkbtn" href="https://music.youtube.com/channel/UCaTIL37a2ff7Pj2XrF3CdkQ" target="_blank" rel="noopener">
+            <span class="icon-chip"><img src="assets/img/mcm/youtube-music.png" alt="" /></span>
+            <span class="linkbtn__text"><span class="linkbtn__label">YouTube Music</span></span>
+            <span class="linkbtn__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="linkbtn" href="https://listen.tidal.com/artist/30380402" target="_blank" rel="noopener">
+            <span class="icon-chip"><img src="assets/img/mcm/tidal.png" alt="" /></span>
+            <span class="linkbtn__text"><span class="linkbtn__label">Tidal</span></span>
+            <span class="linkbtn__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="linkbtn" href="https://music.amazon.ca/artists/B09R78QPCX/midnight-city-music" target="_blank" rel="noopener">
+            <span class="icon-chip"><img src="assets/img/mcm/amazon-music.png" alt="" /></span>
+            <span class="linkbtn__text"><span class="linkbtn__label">Amazon Music</span></span>
+            <span class="linkbtn__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="linkbtn" href="https://www.deezer.com/en/artist/158646762" target="_blank" rel="noopener">
+            <span class="icon-chip"><img src="assets/img/mcm/deezer.png" alt="" /></span>
+            <span class="linkbtn__text"><span class="linkbtn__label">Deezer</span></span>
+            <span class="linkbtn__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div class="footer__brand"><img class="nav__mark" src="assets/favicon.svg" alt="" aria-hidden="true" />Gower Sun</div>
+      <div class="socials" aria-label="Profiles">
+        <a class="social social--icon" href="https://instagram.com/gower_music" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/img/social/instagram.png" alt="Instagram" /></a>
+        <a class="social social--icon" href="https://twitter.com/gowersun" target="_blank" rel="noopener" aria-label="Twitter"><img src="assets/img/social/twitter.png" alt="Twitter" /></a>
+        <a class="social social--icon social--yt" href="https://www.youtube.com/@gowersun/" target="_blank" rel="noopener" aria-label="YouTube"><img src="assets/img/social/youtube.png" alt="YouTube" /></a>
+      </div>
+      <div class="footer__legal">&copy; <span id="year"></span> Gower Sun. All rights reserved.</div>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
