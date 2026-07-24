@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>MeloFade v1 — Arduino MIDI Build · Gower Sun</title>
+  <meta name="description" content="MeloFade v1 — a DIY Arduino MIDI CC controller build by Gower Sun (July 2022): motivation, credits, code and build photos." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Fraunces:ital,opsz,wght@1,9..144,400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="nav is-scrolled" id="nav">
+    <a class="nav__brand" href="index.html" aria-label="Gower Sun — home">
+      <img class="nav__mark" src="assets/favicon.svg" alt="" aria-hidden="true" />
+      <span>Gower Sun</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="index.html#work">Work</a>
+      <a class="nav__link nav__link--cta" href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="subpage">
+    <div class="wrap">
+      <a class="backlink" href="index.html">&larr; Back to gowersun.com</a>
+      <article class="project">
+        <header class="project__head">
+          <span class="eyebrow">Project &middot; July 2022</span>
+          <h1 class="project__title">MeloFade <em>v1</em></h1>
+          <p class="project__sub">A DIY Arduino MIDI CC controller build.</p>
+        </header>
+
+        <div class="project__body">
+          <p>I had been thinking for a while that the MIDI CC controllers I've been using have had either
+            faders that were too short, or drivers that were unstable and prone to crashing. MeloFade v1 was my
+            attempt at designing a custom solution — longer, smoother faders and rock-solid drivers.</p>
+
+          <h2>Special thanks &amp; credits</h2>
+          <p style="color:var(--slate); margin-bottom:16px;">In no particular order —</p>
+          <ul class="credits-list">
+            <li><a href="https://benjohansen.com" target="_blank" rel="noopener">Dr. Ben Johansen</a>
+              (<a href="https://www.baylor.edu/music/index.php?id=951763" target="_blank" rel="noopener">Baylor University</a>) — troubleshooting and inspiration</li>
+            <li><a href="https://www.youtube.com/c/M%C3%BAsicoNerd" target="_blank" rel="noopener">Gustavo Silveira / NerdMusician</a> — Arduino code and YouTube tutorials</li>
+            <li><a href="https://www.instructables.com/DIY-USB-Midi-Controller-With-Arduino-a-Beginners-G/" target="_blank" rel="noopener">dolcewang (Instructables)</a> — circuitry guidance</li>
+            <li><a href="https://gearspace.com/board/music-computers/1240121-diy-midi-cc-controller-w-100mm-sliders-under-100-2018-edition.html" target="_blank" rel="noopener">jsbenson (Gearspace)</a> — concept inspiration</li>
+            <li><a href="https://fvdebyai.com" target="_blank" rel="noopener">Audio Imperia FVDE</a> and
+              <a href="https://nuancescontroller.fr?post_type=product" target="_blank" rel="noopener">Nuances Controller by Pierre</a> — visual inspiration</li>
+            <li>Brother Lemuel — code troubleshooting</li>
+          </ul>
+
+          <h2>Code</h2>
+          <p>The firmware is based on Gustavo Silveira's open-source controller code, modified for MeloFade v1.</p>
+          <div class="codeblock">
+            <a class="btn btn--ghost" href="https://github.com/silveirago/DIY-Midi-Controller-full" target="_blank" rel="noopener">Original code — NerdMusician</a>
+            <a class="btn btn--ghost" href="https://github.com/patestore/MeloFade-v1" target="_blank" rel="noopener">Modified code — MeloFade v1</a>
+          </div>
+
+          <h2>Build pictures — in order</h2>
+        </div>
+
+        <div class="project__gallery">
+          <a href="assets/img/arduino/01.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/01.jpg" alt="MeloFade build photo 1" loading="lazy" /></a>
+          <a href="assets/img/arduino/02.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/02.jpg" alt="MeloFade build photo 2" loading="lazy" /></a>
+          <a href="assets/img/arduino/03.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/03.jpg" alt="MeloFade build photo 3" loading="lazy" /></a>
+          <a href="assets/img/arduino/04.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/04.jpg" alt="MeloFade build photo 4" loading="lazy" /></a>
+          <a href="assets/img/arduino/05.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/05.jpg" alt="MeloFade build photo 5" loading="lazy" /></a>
+          <a href="assets/img/arduino/06.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/06.jpg" alt="MeloFade build photo 6" loading="lazy" /></a>
+          <a href="assets/img/arduino/07.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/07.jpg" alt="MeloFade build photo 7" loading="lazy" /></a>
+          <a href="assets/img/arduino/08.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/08.jpg" alt="MeloFade build photo 8" loading="lazy" /></a>
+          <a href="assets/img/arduino/09.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/09.jpg" alt="MeloFade build photo 9" loading="lazy" /></a>
+          <a href="assets/img/arduino/11.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/11.jpg" alt="MeloFade build photo 10" loading="lazy" /></a>
+          <a href="assets/img/arduino/12.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/12.jpg" alt="MeloFade build photo 11" loading="lazy" /></a>
+          <a href="assets/img/arduino/13.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/13.jpg" alt="MeloFade build photo 12" loading="lazy" /></a>
+          <a href="assets/img/arduino/14.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/14.jpg" alt="MeloFade build photo 13" loading="lazy" /></a>
+          <a href="assets/img/arduino/16.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/16.jpg" alt="MeloFade build photo 14" loading="lazy" /></a>
+          <a href="assets/img/arduino/17.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/17.jpg" alt="MeloFade build photo 15" loading="lazy" /></a>
+          <a href="assets/img/arduino/18.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/18.jpg" alt="MeloFade build photo 16" loading="lazy" /></a>
+          <a href="assets/img/arduino/19.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/19.jpg" alt="MeloFade build photo 17" loading="lazy" /></a>
+          <a href="assets/img/arduino/20.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/20.jpg" alt="MeloFade build photo 18" loading="lazy" /></a>
+          <a href="assets/img/arduino/21.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/21.jpg" alt="MeloFade build photo 19" loading="lazy" /></a>
+          <a href="assets/img/arduino/22.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/22.jpg" alt="MeloFade build photo 20" loading="lazy" /></a>
+          <a href="assets/img/arduino/23.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/23.jpg" alt="MeloFade build photo 21" loading="lazy" /></a>
+          <a href="assets/img/arduino/24.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/24.jpg" alt="MeloFade build photo 22" loading="lazy" /></a>
+          <a href="assets/img/arduino/25.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/25.jpg" alt="MeloFade build photo 23" loading="lazy" /></a>
+          <a href="assets/img/arduino/26.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/26.jpg" alt="MeloFade build photo 24" loading="lazy" /></a>
+          <a href="assets/img/arduino/27.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/27.jpg" alt="MeloFade build photo 25" loading="lazy" /></a>
+          <a href="assets/img/arduino/28.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/28.jpg" alt="MeloFade build photo 26" loading="lazy" /></a>
+          <a href="assets/img/arduino/29.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/29.jpg" alt="MeloFade build photo 27" loading="lazy" /></a>
+          <a href="assets/img/arduino/30.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/30.jpg" alt="MeloFade build photo 28" loading="lazy" /></a>
+          <a href="assets/img/arduino/31.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/31.jpg" alt="MeloFade build photo 29" loading="lazy" /></a>
+          <a href="assets/img/arduino/32.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/32.jpg" alt="MeloFade build photo 30" loading="lazy" /></a>
+          <a href="assets/img/arduino/33.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/33.jpg" alt="MeloFade build photo 31" loading="lazy" /></a>
+          <a href="assets/img/arduino/34.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/34.jpg" alt="MeloFade build photo 32" loading="lazy" /></a>
+          <a href="assets/img/arduino/35.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/35.jpg" alt="MeloFade build photo 33" loading="lazy" /></a>
+          <a href="assets/img/arduino/36.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/36.jpg" alt="MeloFade build photo 34" loading="lazy" /></a>
+          <a href="assets/img/arduino/37.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/37.jpg" alt="MeloFade build photo 35" loading="lazy" /></a>
+          <a href="assets/img/arduino/38.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/38.jpg" alt="MeloFade build photo 36" loading="lazy" /></a>
+          <a href="assets/img/arduino/39.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/39.jpg" alt="MeloFade build photo 37" loading="lazy" /></a>
+          <a href="assets/img/arduino/40.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/40.jpg" alt="MeloFade build photo 38" loading="lazy" /></a>
+          <a href="assets/img/arduino/41.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/41.jpg" alt="MeloFade final product 1" loading="lazy" /></a>
+          <a href="assets/img/arduino/42.jpg" target="_blank" rel="noopener"><img src="assets/img/arduino/42.jpg" alt="MeloFade final product 2" loading="lazy" /></a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div class="footer__brand"><img class="nav__mark" src="assets/favicon.svg" alt="" aria-hidden="true" />Gower Sun</div>
+      <div class="socials" aria-label="Profiles">
+        <a class="social social--icon" href="https://instagram.com/gower_music" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/img/social/instagram.png" alt="Instagram" /></a>
+        <a class="social social--icon" href="https://twitter.com/gowersun" target="_blank" rel="noopener" aria-label="Twitter"><img src="assets/img/social/twitter.png" alt="Twitter" /></a>
+        <a class="social social--icon social--yt" href="https://www.youtube.com/@gowersun/" target="_blank" rel="noopener" aria-label="YouTube"><img src="assets/img/social/youtube.png" alt="YouTube" /></a>
+      </div>
+      <div class="footer__legal">&copy; <span id="year"></span> Gower Sun. All rights reserved.</div>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

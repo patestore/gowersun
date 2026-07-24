@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Unlisted page: kept out of search results and not linked from the main site. -->
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Commission Rates — Gower Sun</title>
+  <meta name="description" content="Commission services and rates for original music production, covers, mixing, and session recording." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Fraunces:ital,opsz,wght@1,9..144,400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* ---- Rates-page-specific ---- */
+    .rates-hero { padding-top: 130px; padding-bottom: 20px; }
+    .status-badge {
+      display: inline-flex; align-items: center; gap: 9px;
+      font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cyan);
+      border: 1px solid rgba(204,84,208,0.35); border-radius: 999px; padding: 7px 15px;
+    }
+    .status-badge .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 0 rgba(204,84,208,0.6); animation: pulse 2.2s infinite; }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(204,84,208,0.55); } 70% { box-shadow: 0 0 0 10px rgba(204,84,208,0); } 100% { box-shadow: 0 0 0 0 rgba(204,84,208,0); } }
+    @media (prefers-reduced-motion: reduce) { .status-badge .pulse { animation: none; } }
+
+    .rates-hero__title { font-family: var(--font-display); font-weight: 800; letter-spacing: -0.03em; font-size: clamp(2.6rem, 7vw, 5.5rem); line-height: 0.92; margin: 22px 0 20px; }
+    .rates-hero__title em { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--cyan); }
+    .rates-hero__lede { color: var(--slate); max-width: 620px; font-size: clamp(1rem, 1.5vw, 1.15rem); }
+
+    .rate-cat { border-top: 1px solid var(--line); padding-top: 30px; margin-top: 8px; }
+    .rate-cat__title { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.1rem); letter-spacing: -0.01em; margin: 0 0 6px; }
+    .rate-cat__note { color: var(--slate-2); font-size: 0.85rem; margin: 0 0 22px; }
+
+    .rate-list { display: grid; gap: 14px; }
+    .rate {
+      background: linear-gradient(180deg, var(--panel), var(--ink-2));
+      border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px;
+      transition: border-color .3s, transform .3s var(--ease-out);
+    }
+    .rate:hover { border-color: rgba(204,84,208,0.28); transform: translateY(-2px); }
+    .rate__head { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; flex-wrap: wrap; }
+    .rate__name { font-family: var(--font-body); font-weight: 600; font-size: 1.12rem; margin: 0; color: var(--bone); }
+    .rate__name span { color: var(--slate); font-weight: 400; font-size: 0.9rem; }
+    .rate__price { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: var(--cyan); white-space: nowrap; }
+    .rate__price em { font-family: var(--font-body); font-style: normal; font-size: 0.8rem; letter-spacing: 0.06em; color: var(--slate); font-weight: 400; }
+    .rate__note { color: #AEB9C6; font-size: 0.92rem; margin: 12px 0 0; line-height: 1.6; }
+
+    .panels { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px; }
+    .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 24px 26px; }
+    .panel h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; margin: 0 0 14px; }
+    .panel ul { margin: 0; padding-left: 18px; color: #AEB9C6; font-size: 0.92rem; line-height: 1.7; }
+    .panel li { margin-bottom: 7px; }
+    .panel strong { color: var(--bone); font-weight: 600; }
+
+    .callout { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; justify-content: space-between;
+      background: linear-gradient(120deg, rgba(106,175,242,0.16), rgba(204,84,208,0.06));
+      border: 1px solid rgba(204,84,208,0.3); border-radius: 16px; padding: 22px 26px; }
+    .callout p { margin: 0; color: var(--bone); }
+    .callout .big { font-family: var(--font-display); font-weight: 800; color: var(--cyan); font-size: 1.4rem; }
+
+    .book-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+    .fineprint { color: var(--slate-2); font-size: 0.85rem; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#rates">Skip to content</a>
+
+  <header class="nav is-scrolled" id="nav">
+    <a class="nav__brand" href="index.html" aria-label="Gower Sun — home">
+      <img class="nav__mark" src="assets/favicon.svg" alt="" aria-hidden="true" />
+      <span>Gower Sun</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" href="index.html#work">Work</a>
+      <a class="nav__link" href="index.html#composer">About</a>
+      <a class="nav__link nav__link--cta" href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="rates">
+    <!-- Header -->
+    <section class="section rates-hero" aria-labelledby="rates-title">
+      <div class="wrap">
+        <span class="status-badge"><span class="pulse" aria-hidden="true"></span>Open for commissions</span>
+        <h1 class="rates-hero__title" id="rates-title">Commission <em>rates</em></h1>
+        <p class="rates-hero__lede">Original music, film and game scores, covers, mixing, and session recording. Rates are a starting point — every project is quoted to its scope, rights, and deadline.</p>
+        <div class="book-row">
+          <a class="btn" href="mailto:commissions@gowersun.com">Request a quote</a>
+          <a class="btn btn--ghost" href="https://twitter.com/gowersun" target="_blank" rel="noopener">@gowersun on Twitter</a>
+        </div>
+        <p class="fineprint">All rates in USD. CAD billing available on request. Payment via PayPal, Wise, or Interac e-Transfer (within Canada).</p>
+      </div>
+    </section>
+
+    <!-- Original Music Production -->
+    <section class="section section--tight" aria-labelledby="cat-original">
+      <div class="wrap">
+        <div class="rate-cat">
+          <h2 class="rate-cat__title" id="cat-original">Original music production</h2>
+          <p class="rate-cat__note">Per-minute rates apply to the first 3 minutes; $210/min thereafter.</p>
+          <div class="rate-list">
+            <div class="rate">
+              <div class="rate__head"><h3 class="rate__name">Full production <span>with vocals</span></h3><span class="rate__price">$515<em>/min</em></span></div>
+              <p class="rate__note">Includes vocal tuning, timing, mix, 10 revisions, and a reference master. Additional revisions $50 each. $150 off if you provide pre-tuned vocals.</p>
+            </div>
+            <div class="rate">
+              <div class="rate__head"><h3 class="rate__name">Instrumental only</h3><span class="rate__price">$410<em>/min</em></span></div>
+              <p class="rate__note">Full production, mix, reference master, and 10 revisions. Additional revisions $50 each.</p>
+            </div>
+            <div class="rate">
+              <div class="rate__head"><h3 class="rate__name">Motion picture score</h3><span class="rate__price">2–5%<em>of budget</em></span></div>
+              <p class="rate__note">Negotiable based on rights, deadlines, and live-recording needs. Includes full production, mix, and professional external mastering (Abbey Road Studios).</p>
+            </div>
+            <div class="rate">
+              <div class="rate__head"><h3 class="rate__name">Loopable background music</h3><span class="rate__price">$210<em>flat</em></span></div>
+              <p class="rate__note">One minute of original, loopable music — 100% royalty-free.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cover Production -->
+    <section class="section section--tight" aria-labelledby="cat-cover">
+      <div class="wrap">
+        <div class="rate-cat">
+          <h2 class="rate-cat__title" id="cat-cover">Cover production</h2>
+          <div class="rate-list">
+            <div class="rate">
+              <div class="rate__head"><h3 class="rate__name">Instrumental remake</h3><span class="rate__price">$210–310<em>/min</em></span></div>
+              <p class="rate__note">A 1:1 remake, with vocal tuning, timing, and mix included.</p>
+            </div>
+            <div class="rate">
+              <div class="rate__head"><h3 class="rate__name">Cover arranging &amp; production</h3><span class="rate__price">$310<em>/min</em></span></div>
+              <p class="rate__note">Arrangement and orchestration changes, with vocal tuning, timing, and mix.</p>
+            </div>
+            <div class="rate">
+              <div class="rate__head"><h3 class="rate__name">Instrumental cover arranging</h3><span class="rate__price">$210<em>/min</em></span></div>
+              <p class="rate__note">Arrangement and orchestration changes only.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editing & Mixing -->
+    <section class="section section--tight" aria-labelledby="cat-mix">
+      <div class="wrap">
+        <div class="rate-cat">
+          <h2 class="rate-cat__title" id="cat-mix">Editing &amp; mixing</h2>
+          <p class="rate-cat__note">All mixing includes 3 revisions; additional revisions $50 each.</p>
+          <div class="rate-list">
+            <div class="rate">
+              <div class="rate__head"><h3 class="rate__name">Full production mix</h3><span class="rate__price">$420<em>flat</em></span></div>
+              <p class="rate__note">Instrumental and vocals, unlimited tracks. Includes a master reference.</p>
+            </div>
+            <div class="rate">
+              <div class="rate__head"><h3 class="rate__name">Instrumental mix</h3><span class="rate__price">$270<em>flat</em></span></div>
+              <p class="rate__note">Unlimited tracks. Includes a master reference.</p>
+            </div>
+            <div class="rate">
+              <div class="rate__head"><h3 class="rate__name">Orchestral recording mix</h3><span class="rate__price">$610<em>flat</em></span></div>
+              <p class="rate__note">Up to 1,500 tracks; each additional 200 tracks $70. Includes basic audio editing and a master reference.</p>
+            </div>
+            <div class="rate">
+              <div class="rate__head"><h3 class="rate__name">Vocal mix <span>with tuning &amp; editing</span></h3><span class="rate__price">$210<em>flat</em></span></div>
+              <p class="rate__note">Up to 8 vocal tracks; additional tracks $15 each.</p>
+            </div>
+            <div class="rate">
+              <div class="rate__head"><h3 class="rate__name">Vocal mix <span>without tuning</span></h3><span class="rate__price">$120<em>flat</em></span></div>
+              <p class="rate__note">Up to 8 vocal tracks; additional tracks $15 each.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Session Recording + discount callout -->
+    <section class="section section--tight" aria-labelledby="cat-session">
+      <div class="wrap">
+        <div class="rate-cat">
+          <h2 class="rate-cat__title" id="cat-session">Session recording</h2>
+          <div class="rate-list">
+            <div class="rate">
+              <div class="rate__head"><h3 class="rate__name">Violin / session performance</h3><span class="rate__price">CFM / AFM<em>agreement</em></span></div>
+              <p class="rate__note">Rates set by the CFM/AFM Sound Recording Labour Agreement. Remote recordings delivered at 48&nbsp;kHz / 24-bit, stereo and mono, unless otherwise requested.</p>
+            </div>
+          </div>
+
+          <div class="callout" style="margin-top:22px;">
+            <p><span class="big">50% off</span> all rates for registered Canadian and U.S. nonprofits and charities.</p>
+            <a class="btn btn--ghost" href="mailto:commissions@gowersun.com">Ask about eligibility</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terms & process -->
+    <section class="section section--tight" aria-labelledby="cat-terms">
+      <div class="wrap">
+        <div class="rate-cat">
+          <h2 class="rate-cat__title" id="cat-terms">What to expect</h2>
+          <div class="panels">
+            <div class="panel">
+              <h3>Turnaround</h3>
+              <ul>
+                <li>Original tracks (~3–4 min): <strong>about one week</strong></li>
+                <li>Covers: <strong>2–3 working days</strong></li>
+                <li>Specific deadlines agreed during project discussion</li>
+              </ul>
+            </div>
+            <div class="panel">
+              <h3>Deliverables</h3>
+              <ul>
+                <li>.wav renders of final mixes</li>
+                <li>Reference masters &amp; premasters</li>
+                <li>Acapella and full instrumentals</li>
+                <li>Extra renders (stems, stage edits) may incur additional fees</li>
+                <li>Project files are not typically provided</li>
+              </ul>
+            </div>
+            <div class="panel">
+              <h3>Licensing &amp; rights</h3>
+              <ul>
+                <li>You retain commercial and personal use rights to your commissioned work unless otherwise negotiated</li>
+                <li>Rights to original compositions are discussed case by case where Gower has contributed significantly to the composition</li>
+              </ul>
+            </div>
+            <div class="panel">
+              <h3>Good to know</h3>
+              <ul>
+                <li>Standalone vocal tuning/timing is included within full productions, not sold separately</li>
+                <li>Standalone external mastering isn't offered; reference masters are delivered to a professional standard</li>
+                <li>Complex projects, tight deadlines, poor-quality source audio, or copyright considerations may affect pricing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" aria-labelledby="rates-cta">
+      <div class="wrap">
+        <h2 class="cta__title" id="rates-cta">Have a <em>project?</em></h2>
+        <p class="cta__lead">Send the scope, references, and your deadline for a tailored quote.</p>
+        <a class="btn" href="mailto:commissions@gowersun.com">
+          commissions@gowersun.com
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div class="footer__brand"><img class="nav__mark" src="assets/favicon.svg" alt="" aria-hidden="true" />Gower Sun</div>
+      <div class="socials" aria-label="Profiles">
+        <a class="social" href="https://twitter.com/gowersun" target="_blank" rel="noopener">Twitter</a>
+        <a class="social" href="https://instagram.com/gower_music" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="footer__legal">© <span id="year"></span> Gower Sun. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

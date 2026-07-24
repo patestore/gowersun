@@ -44,24 +44,44 @@ html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   background-color: var(--ink);
-  /* deep-space nebula clouds (fixed) + a dense multi-layer starfield */
+  /* deep-space galaxy: dense multi-colour starfield + a milky-way haze band +
+     blue-heavy nebula clouds with warm accents scattered through */
   background-image:
-    radial-gradient(120% 85% at 82% -10%, rgba(74,66,174,0.42), transparent 55%),
-    radial-gradient(95% 75% at -5% 20%, rgba(204,84,208,0.22), transparent 55%),
-    radial-gradient(90% 80% at 55% 118%, rgba(106,175,242,0.20), transparent 55%),
-    radial-gradient(70% 60% at 28% 62%, rgba(138,110,220,0.16), transparent 60%),
-    radial-gradient(60% 55% at 95% 72%, rgba(204,84,208,0.12), transparent 62%),
-    radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.85), transparent),
-    radial-gradient(1.5px 1.5px at 150px 90px, rgba(235,164,210,0.7), transparent),
-    radial-gradient(1px 1px at 210px 180px, rgba(106,175,242,0.65), transparent),
-    radial-gradient(1px 1px at 90px 220px, rgba(255,255,255,0.6), transparent),
-    radial-gradient(1px 1px at 130px 60px, rgba(255,255,255,0.7), transparent),
-    radial-gradient(2px 2px at 60px 150px, rgba(255,255,255,0.9), transparent),
-    radial-gradient(1px 1px at 250px 250px, rgba(235,164,210,0.55), transparent),
-    radial-gradient(1.5px 1.5px at 300px 40px, rgba(160,190,255,0.7), transparent);
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat;
-  background-size: auto, auto, auto, auto, auto, 260px 260px, 340px 340px, 220px 220px, 300px 300px, 180px 180px, 420px 420px, 280px 280px, 500px 500px;
-  background-attachment: fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed;
+    /* --- stars (on top) --- */
+    radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.90), transparent),
+    radial-gradient(1.5px 1.5px at 150px 90px, rgba(180,205,255,0.80), transparent),
+    radial-gradient(1px 1px at 210px 180px, rgba(255,255,255,0.75), transparent),
+    radial-gradient(1px 1px at 90px 220px, rgba(120,175,245,0.75), transparent),
+    radial-gradient(1px 1px at 130px 60px, rgba(210,222,255,0.80), transparent),
+    radial-gradient(2px 2px at 60px 150px, rgba(255,255,255,0.95), transparent),
+    radial-gradient(1px 1px at 250px 250px, rgba(255,220,180,0.62), transparent),
+    radial-gradient(1.5px 1.5px at 300px 40px, rgba(160,190,255,0.78), transparent),
+    radial-gradient(1px 1px at 45px 200px, rgba(200,215,255,0.60), transparent),
+    radial-gradient(1px 1px at 330px 120px, rgba(255,175,210,0.52), transparent),
+    /* --- milky-way haze band (diagonal) --- */
+    linear-gradient(118deg, transparent 38%, rgba(150,175,255,0.10) 47%, rgba(190,160,255,0.08) 53%, transparent 62%),
+    /* --- nebula clouds (behind) --- */
+    radial-gradient(110% 80% at 82% -8%, rgba(64,92,210,0.40), transparent 58%),
+    radial-gradient(95% 78% at -6% 24%, rgba(120,86,214,0.26), transparent 58%),
+    radial-gradient(95% 82% at 52% 118%, rgba(74,150,240,0.26), transparent 58%),
+    radial-gradient(72% 62% at 30% 60%, rgba(140,104,224,0.16), transparent 62%),
+    radial-gradient(60% 55% at 62% 40%, rgba(90,130,235,0.15), transparent 62%),
+    radial-gradient(45% 42% at 88% 78%, rgba(255,140,105,0.11), transparent 64%),
+    radial-gradient(38% 36% at 18% 90%, rgba(255,185,120,0.09), transparent 64%),
+    radial-gradient(52% 46% at 40% 8%, rgba(240,110,190,0.12), transparent 64%),
+    radial-gradient(50% 48% at 96% 46%, rgba(204,84,208,0.12), transparent 64%);
+  background-repeat:
+    repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
+    no-repeat,
+    no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size:
+    260px 260px, 340px 340px, 220px 220px, 300px 300px, 180px 180px, 420px 420px, 280px 280px, 500px 500px, 150px 150px, 360px 360px,
+    auto,
+    auto, auto, auto, auto, auto, auto, auto, auto, auto;
+  background-attachment:
+    fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed,
+    fixed,
+    fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed;
   color: var(--bone);
   font-family: var(--font-body);
   font-size: 16px;
@@ -76,10 +96,12 @@ body::before {
   content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
   background-image:
     radial-gradient(1.5px 1.5px at 40px 60px, rgba(255,255,255,0.95), transparent),
-    radial-gradient(2px 2px at 200px 120px, rgba(190,210,255,0.85), transparent),
-    radial-gradient(1.5px 1.5px at 320px 300px, rgba(255,235,250,0.8), transparent),
-    radial-gradient(1px 1px at 120px 260px, rgba(255,255,255,0.8), transparent);
-  background-size: 400px 400px, 520px 520px, 360px 360px, 300px 300px;
+    radial-gradient(2px 2px at 200px 120px, rgba(190,210,255,0.88), transparent),
+    radial-gradient(1.5px 1.5px at 320px 300px, rgba(255,225,235,0.82), transparent),
+    radial-gradient(1px 1px at 120px 260px, rgba(255,255,255,0.82), transparent),
+    radial-gradient(2px 2px at 470px 180px, rgba(255,210,170,0.75), transparent),
+    radial-gradient(1.5px 1.5px at 250px 430px, rgba(170,200,255,0.82), transparent);
+  background-size: 400px 400px, 520px 520px, 360px 360px, 300px 300px, 620px 620px, 560px 560px;
   background-repeat: repeat;
   animation: twinkle 5.5s ease-in-out infinite alternate;
 }
@@ -265,8 +287,11 @@ a { color: inherit; text-decoration: none; }
 }
 .hero__lede {
   color: var(--slate); font-size: clamp(0.95rem, 1.4vw, 1.1rem);
-  max-width: 440px;
+  max-width: none;
 }
+.hero__quote { display: block; white-space: nowrap; }
+.hero__cite { display: block; margin-top: 7px; color: var(--slate-2); font-size: 0.92em; }
+@media (max-width: 640px) { .hero__quote { white-space: normal; } }
 
 /* the living string canvas */
 .string-field {
@@ -378,7 +403,7 @@ a { color: inherit; text-decoration: none; }
   content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
   box-shadow: inset 0 0 70px -18px rgba(8,6,26,0.85);
 }
-.about__body p { color: #D8CCDA; margin: 0 0 1.1em; font-size: 1.12rem; line-height: 1.7; }
+.about__body p { color: #D8CCDA; margin: 0 0 1.1em; font-size: 1.02rem; line-height: 1.7; }
 .about__pull {
   font-family: var(--font-serif); font-style: italic; font-weight: 400;
   font-size: clamp(1.3rem, 2.4vw, 2rem); line-height: 1.3; color: var(--bone);
@@ -419,17 +444,17 @@ a { color: inherit; text-decoration: none; }
     linear-gradient(90deg, rgba(8,6,26,0.12) 0%, rgba(8,6,26,0.35) 30%, rgba(8,6,26,0.82) 62%, rgba(8,6,26,0.95) 100%),
     radial-gradient(70% 120% at 92% 40%, rgba(204,84,208,0.18), transparent 60%);
 }
-.player__inner { position: relative; max-width: 460px; margin-left: auto; } /* right third */
+.player__inner { position: relative; max-width: 420px; margin-left: auto; } /* right third */
 /* dark translucent card around the body text only (not the title) */
 .player__body {
   background: rgba(8,6,26,0.55);
   -webkit-backdrop-filter: blur(7px); backdrop-filter: blur(7px);
   border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: clamp(22px, 2.6vw, 32px);
+  border-radius: 14px;
+  padding: clamp(18px, 2.1vw, 26px);
   box-shadow: 0 34px 80px -34px rgba(0,0,0,0.85);
 }
-.player__body p { color: #EADFEC; margin: 0 0 1.1em; font-size: 1.12rem; line-height: 1.7; }
+.player__body p { color: #EADFEC; margin: 0 0 1.1em; font-size: 1.02rem; line-height: 1.7; }
 .player__body p:last-child { margin-bottom: 0; }
 .player__body p:first-of-type { color: var(--bone); }
 .player__body .about__pull { color: var(--bone); }
@@ -744,6 +769,20 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 34px 80px -44px #000; margin: 4px 0 8px;
 }
 .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+/* click-to-play facade (avoids the YouTube "config" error on load; plays on click) */
+.ytlite { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0;
+  cursor: pointer; display: block; background: #0b0a1e; overflow: hidden; }
+.ytlite img { width: 100%; height: 100%; object-fit: cover; opacity: 0.9;
+  transition: opacity .3s, transform .6s var(--ease-out); }
+.ytlite:hover img, .ytlite:focus-visible img { opacity: 1; transform: scale(1.03); }
+.ytlite__play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 78px; height: 55px; border-radius: 14px; background: rgba(8,6,26,0.7);
+  border: 1px solid var(--line-2); display: grid; place-items: center;
+  transition: background .3s, border-color .3s, transform .3s var(--ease-out); }
+.ytlite:hover .ytlite__play, .ytlite:focus-visible .ytlite__play {
+  background: var(--cyan); border-color: var(--cyan); transform: translate(-50%, -50%) scale(1.06); }
+.ytlite__play::before { content: ""; margin-left: 4px;
+  border-style: solid; border-width: 10px 0 10px 17px; border-color: transparent transparent transparent #fff; }
 /* clear, visible licence terms (centred, with the download button inside) */
 .terms {
   text-align: center;
